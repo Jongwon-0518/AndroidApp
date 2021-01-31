@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/addbutton"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/Number2"
+        android:onClick="addbutton"
+        android:text="+"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        app:layout_constraintEnd_toStartOf="@+id/subtractbutton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number2" />
+
+    <Button
+        android:id="@+id/subtractbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Number2"
+        android:onClick="subtractbutton"
+        android:text="-"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        app:layout_constraintEnd_toStartOf="@+id/multiplebutton"
+        app:layout_constraintStart_toEndOf="@+id/addbutton"
+        app:layout_constraintTop_toBottomOf="@+id/Number2" />
+
+    <Button
+        android:id="@+id/multiplebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Number2"
+        android:onClick="multiplebutton"
+        android:text="x"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        app:layout_constraintEnd_toStartOf="@+id/dividebutton"
+        app:layout_constraintStart_toEndOf="@+id/subtractbutton"
+        app:layout_constraintTop_toBottomOf="@+id/Number2" />
+
+    <Button
+        android:id="@+id/dividebutton"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/Number2"
+        android:onClick="dividebutton"
+        android:text="/"
+        app:layout_constraintBottom_toTopOf="@+id/Result"
+        app:layout_constraintStart_toEndOf="@+id/multiplebutton"
+        app:layout_constraintTop_toBottomOf="@+id/Number2" />
+
+    <EditText
+        android:id="@+id/Number1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="첫 번째 숫자"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Number2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Number1"
+        android:ems="10"
+        android:hint="두 번째 숫자"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/addbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Number1" />
+
+    <EditText
+        android:id="@+id/Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addbutton"
+        android:ems="10"
+        android:hint="결과"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplebutton" />
+
+    <Button
+        android:id="@+id/exitbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="종료"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Result" />
+</androidx.constraintlayout.widget.ConstraintLayout>
