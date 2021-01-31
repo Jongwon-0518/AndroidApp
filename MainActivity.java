@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         TextView Result = (EditText) findViewById(R.id.Result);
         int n1 = Integer.parseInt(Number1.getText().toString());
         int n2 = Integer.parseInt(Number2.getText().toString());
-        Result.setText(Integer.toString(n1 / n2));
+        Result.setText(Integer.toString(n1 / n2) + "....." + Integer.toString(n1%n2));
     }
 
 
